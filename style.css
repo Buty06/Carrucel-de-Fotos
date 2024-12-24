@@ -1,4 +1,117 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 html {
   opacity: 1;
   visibility: visible;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.container {
+  perspective: 250px;
+  width: 300px;
+  height: 150px;
+  position: relative;
+}
+
+.targeta {
+  width: 70px;
+  height: 130px;
+  background-color: #442222;
+  font-size: 40px;
+  position: absolute;
+  top: 35px;
+  left: 125px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  animation: carrucel 8s linear infinite;
+
+  &:hover{
+    box-shadow: 0px 0px 10px white;
+  }
+}
+
+@keyframes carrucel {
+  from {
+    transform: rotateY(360deg) translateZ(100px);
+    z-index: 10;
+  }
+
+  50% {
+    z-index: -10;
+  }
+
+  to {
+    z-index: 10;
+    transform: rotateX(0deg) translateZ(100px);
+  }
+}
+
+#foto_15{
+    background-image: url(assets/12.jpg);
+    background-size: cover;
+}
+
+#foto_14{
+    background-image: url(assets/10.jpg);
+    background-size: cover;
+    animation-delay: -1s;
+}
+
+#foto_13{
+    background-image: url(assets/9.jpg);
+    background-size: cover;
+    animation-delay: -2s;
+}
+
+#foto_12{
+    background-image: url(assets/8.jpg);
+    background-size: cover;
+    animation-delay: -3s;
+}
+
+#foto_11{
+    background-image: url(assets/6.jpg);
+    background-size: cover;
+    animation-delay: -4s;
+}
+
+#foto_10{
+    background-image: url(assets/5.jpg);
+    background-size: cover;
+    animation-delay: -5s;
+}
+
+#foto_9{
+    background-image: url(assets/4.jpg);
+    background-size: cover;
+    animation-delay: -6s;
+}
+
+#foto_8{
+    background-image: url(assets/3.jpg);
+    background-size: cover;
+    animation-delay: -7s;
+}
+
+#foto_7{
+    background-image: url(assets/1jpg);
+    background-size: cover;
+    animation-delay: -8s;
 }
